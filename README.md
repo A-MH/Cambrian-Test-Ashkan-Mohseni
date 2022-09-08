@@ -1,4 +1,6 @@
 # Cambrian Test Ashkan Mohseni
- ## Limitations:
- * unity must be run before python
+ ## content:
+ * development build of the project
+ * project as a unity package
+ * complementary python files
     
