@@ -1,13 +1,17 @@
 import socket
 import time
 
-host, port = "192.168.1.41", 25001
+port = 25001
 
 def setup_connection():
     global sock
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    ## getting the hostname by socket.gethostname() method
+    hostname = socket.gethostname()
+    ## getting the IP address using socket.gethostbyname() method
+    ip_address = socket.gethostbyname(hostname)
     try:
-        sock.connect((host, port))
+        sock.connect((ip_address, port))
     except:
         setup_connection()
 
